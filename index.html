@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guiando Vidas</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Guiando Vidas</h1>
+  <p>Transformando vidas através do esporte</p>
+</header>
+
+<nav>
+  <a href="#sobre">Sobre</a>
+  <a href="#pre">Aula Experimental</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeW9HhFtvTzaGF_-WWuypNUmln9sZoPcDOc2B2uuCzzVrUGhw/viewform" target="_blank">
+  Cadastro
+</a>
+  <a href="#carteirinha">Carteirinha</a>
+  <a href="#galeria">Galeria</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section id="sobre">
+  <div class="card">
+    <h2>Sobre o Projeto</h2>
+    <p>
+      O projeto Guiando Vidas é uma iniciativa social gratuita e independente,
+      localizada na Vila Kennedy. Nosso objetivo é transformar vidas através
+      da disciplina, do esporte e da educação, oferecendo oportunidades reais
+      para crianças e jovens.
+    </p>
+  </div>
+</section>
+
+<section id="pre">
+  <div class="card">
+    <h2>Pré-cadastro (Aula Experimental)</h2>
+    <form onsubmit="enviarWhats(event, 'pre')">
+      <input type="text" id="nome_pre" placeholder="Nome" required>
+      <input type="number" id="idade_pre" placeholder="Idade" required>
+      <input type="text" id="resp_pre" placeholder="Responsável" required>
+      <input type="tel" id="tel_pre" placeholder="Telefone" required>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<section id="carteirinha">
+  <div class="card">
+
+    <h2>Carteirinha do Aluno</h2>
+
+    <form id="formCarteirinha">
+
+      <input type="text" id="nome" placeholder="Nome completo" required>
+
+      <input type="number" id="idade" placeholder="Idade" required>
+
+      <input type="text" id="resp" placeholder="Responsável" required>
+
+      <input type="tel" id="tel" placeholder="Telefone" required>
+
+      <input type="text" id="end" placeholder="Endereço" required>
+
+      <button type="submit">Gerar Carteirinha</button>
+
+    </form>
+
+
+    <!-- CARTEIRINHA -->
+
+    <div id="carteirinhaAluno" class="carteirinha" style="display:none;">
+
+      <div class="topo-card">
+        
+        <p>Transformando vidas através do esporte</p>
+      </div>
+
+      <div class="conteudo-card">
+
+        <div class="foto-card">
+          <img src="fotos/png-logo.png" alt="">
+        </div>
+
+        <div class="dados-card">
+
+          <p><strong>Nº:</strong> <span id="numCarteira"></span></p>
+
+          <p><strong>Nome:</strong> <span id="cardNome"></span></p>
+
+          <p><strong>Idade:</strong> <span id="cardIdade"></span></p>
+
+          <p><strong>Responsável:</strong> <span id="cardResp"></span></p>
+
+          <p><strong>Telefone:</strong> <span id="cardTel"></span></p>
+
+        </div>
+
+      </div>
+
+      
+
+    </div>
+    
+<button id="baixarCarteirinha">Baixar Carteirinha</button>
+  </div>
+</section>
+
+
+<section id="galeria">
+  <div class="card">
+    <h2>Galeria</h2>
+    <div class="gallery">
+  <img src="fotos/Sem-titulo9.jpg" onclick="abrir(this)">
+  <img src="fotos/Sem-titulo8.jpg" onclick="abrir(this)">
+  <img src="fotos/Sem-titulo.jpg" onclick="abrir(this)">
+  <img src="fotos/Sem-titulo1.jpg" onclick="abrir(this)">
+  <img src="fotos/Sem-titulo2.jpg" onclick="abrir(this)">
+  <img src="fotos/Sem-titulo3.jpg" onclick="abrir(this)">
+  <img src="fotos/Sem-titulo4.jpg" onclick="abrir(this)">
+  <img src="fotos/Sem-titulo5.jpg" onclick="abrir(this)">
+  <img src="fotos/Sem-titulo6.jpg" onclick="abrir(this)">
+  <img src="fotos/Sem-titulo7.jpg" onclick="abrir(this)">
+  
+</div>
+  </div>
+
+  
+
+</section>
+
+<section id="contato">
+  <div class="card contact">
+    <h2>Contato</h2>
+
+<p>
+  <a href="https://wa.me/5521977099472" target="_blank" rel="noopener noreferrer">
+    WhatsApp
+  </a>
+</p>
+
+<p>
+  <a href="https://instagram.com/guiandovidas.of" target="_blank" rel="noopener noreferrer">
+    Instagram
+  </a>
+</p>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 - Guiando Vidas</p>
+</footer>
+
+<!-- JS -->
+<div id="lightbox" class="lightbox">
+  <span class="fechar" onclick="fechar()">&times;</span>
+  <img id="imgGrande" class="lightbox-img">
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script type="module" src="index.js"></script>
+
+
+</body>
+</html>
