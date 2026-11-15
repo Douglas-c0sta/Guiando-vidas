@@ -13,7 +13,7 @@ import {
 // ==========================================
 
 const firebaseConfig = {
-  apiKey: "SUA_API_KEY_COMPLETA",
+  apiKey: "apiKey: "AIzaSyBZahI8RaMXuO6x2qpi1gBQkml6QNqxt_k",
   authDomain: "guiando-vidas.firebaseapp.com",
   projectId: "guiando-vidas",
   storageBucket: "guiando-vidas.firebasestorage.app",
